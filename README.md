@@ -33,7 +33,7 @@ Setup
 
 Operation
 1. A customer will navigate to the Shop section of the website and add items to the cart. After initiating the checkout and filling in customer information the available payment methods will be displayed.
-![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless_2/assets/124227412/f028d115-08d8-437d-99a2-6b722899f279)
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless_2/assets/124227412/cb6a9f7b-85d8-4e37-b522-53015a4d0328)
 3. The customer can select the Bitcoin Lightning option and directions will appear below.
 ![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless_2/assets/124227412/a4ef4c09-b5b9-4253-8bad-15655cd225d0)
 4. After clicking Pay Now  the customer will be taken to a Nodeless page with the invoice and QR code to be paid.
