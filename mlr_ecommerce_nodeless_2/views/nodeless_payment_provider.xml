@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+        <record id="provider_form_nodeless" model="ir.ui.view">
+            <field name="name">provider.form.nodeless</field>
+            <field name="model">payment.provider</field>
+            <field name="inherit_id" ref="payment.payment_provider_form"/>
+             <field name="arch" type="xml">
+                <group name="provider_credentials" position="inside">
+                    <group attrs="{'invisible': [('code', '!=', 'nodeless')]}">
+                        <button string="Connect nodeless server"
+                                type="object"
+                                name="action_test_connection"
+                                class="btn-primary"
+                                colspan="1"
+                                icon="fa-television"/>
+                        <group>
+                            <field name="code"/>
+                            <field name="nodeless_server_url"/>
+                            <field name="nodeless_api_key"/>
+                            <field name="nodeless_store_id"/>
+                            <field name="nodeless_expiration_minutes"/>
+                            <field name="nodeless_monitoring_minutes"/>
+                            <field name="nodeless_speed_policy"/>
+                        </group>
+                    </group>
+                </group>
+             </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="payment_provider_nodeless" model="payment.provider">
+        <field name="name">nodeless</field>
+        <field name="code">nodeless</field>
+        <field name="is_crypto_provider">true</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="image_128" type="base64" file="mlr_ecommerce_nodeless_2/static/description/icon.png"/>
+        <field name="display_as">Nodeless powered by MI Lightning Rod</field>
+        <field name="inline_form_view_id" ref="nodeless_inline_form"/>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+    </record>
+</odoo>
