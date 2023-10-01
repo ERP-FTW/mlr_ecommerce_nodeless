@@ -103,6 +103,6 @@ class CustomController(Controller):
                 trn._set_error("Issue while creating Nodeless invoice, retry after sometime, if issue persists, please contact support or write to us")
                 return request.redirect('/payment/status')
         except:
-            _logger.info("Issue while checking Nodeless invoice, retry after sometime, if issue persits, please contact support. An exception occurred in Nodeless create_invoice")
-            trn._set_error("Issue while checking Nodeless invoice, retry after sometime, if issue persits, please contact support. An exception occurred in Nodeless create_invoice")
+            _logger.info("Issue while creating Nodeless invoice, retry after sometime, if issue persits, please contact support. An exception occurred in Nodeless create_invoice")
+            trn._set_error("Issue while creating Nodeless invoice, retry after sometime, if issue persits, please contact support. An exception occurred in Nodeless create_invoice")
             return request.redirect('/payment/status')
