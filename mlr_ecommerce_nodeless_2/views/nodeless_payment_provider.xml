@@ -5,22 +5,16 @@
             <field name="model">payment.provider</field>
             <field name="inherit_id" ref="payment.payment_provider_form"/>
              <field name="arch" type="xml">
-                <group name="provider_credentials" position="inside">
+                <group name="provider_credentials" position="after">
                     <group attrs="{'invisible': [('code', '!=', 'nodeless')]}">
-                        <button string="Connect nodeless server"
+                        <group>
+                            <field name="nodeless_store_id"/>
+                            <button string="Connect nodeless server"
                                 type="object"
                                 name="action_test_connection"
                                 class="btn-primary"
-                                colspan="1"
+                                colspan="4"
                                 icon="fa-television"/>
-                        <group>
-                            <field name="code"/>
-                            <field name="nodeless_server_url"/>
-                            <field name="nodeless_api_key"/>
-                            <field name="nodeless_store_id"/>
-                            <field name="nodeless_expiration_minutes"/>
-                            <field name="nodeless_monitoring_minutes"/>
-                            <field name="nodeless_speed_policy"/>
                         </group>
                     </group>
                 </group>

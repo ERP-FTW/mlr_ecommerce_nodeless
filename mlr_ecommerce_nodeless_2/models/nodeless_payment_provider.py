@@ -15,22 +15,12 @@ class PaymentProvider(models.Model):
 
     code = fields.Selection(
         selection_add=[('nodeless', "nodeless")], ondelete={'nodeless': 'set default'})
-    nodeless_server_url = fields.Char(string='Server URL')
-    nodeless_api_key = fields.Char(string='API Key')
     nodeless_store_id = fields.Char(string='Store ID')
-    nodeless_expiration_minutes = fields.Integer('Expiration Minutes')
-    nodeless_monitoring_minutes = fields.Integer('Monitoring Minutes')
-    nodeless_speed_policy = fields.Selection(
-        [("HighSpeed", "HighSpeed"), ("MediumSpeed", "MediumSpeed"), ("LowMediumSpeed", "LowMediumSpeed"),
-         ("LowSpeed", "LowSpeed")],
-        default="HighSpeed",
-        string="Speed Policy",
-    )
 
     def test_nodeless_server_connection(self):
         try:
-            server_url = self.nodeless_server_url + "/api/v1/status"
-            headers = {"Authorization": "Bearer %s" % (self.nodeless_api_key), "Content-Type": "application/json",
+            server_url = self.crypto_server_url + "/api/v1/status"
+            headers = {"Authorization": "Bearer %s" % (self.crypto_api_key), "Content-Type": "application/json",
                        "Accept": "application/json"}
             response = requests.request(method="GET", url=server_url, headers=headers)
             is_success = True if response.status_code == 200 else False
