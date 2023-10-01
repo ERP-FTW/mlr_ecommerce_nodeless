@@ -5,7 +5,7 @@
     "website": "https://www.milightningrod.com",
     "category": "Ecommerce",
     "version": "1.0",
-    "depends": ["website"],
+    "depends": ["website", "mlr_ecommerce_cryptopayments"],
     "data": [
         "views/nodeless_payment_template.xml",
         "data/nodeless_payment_provider_data.xml",
