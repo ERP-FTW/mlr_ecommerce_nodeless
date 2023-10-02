@@ -30,7 +30,7 @@ class PaymentProvider(models.Model):
         except Exception as e:
             raise UserError(_("Test Connection Error: %s", e.args))
 
-    def action_test_connection(self):
+    def nodeless_action_test_connection(self):
         is_success = self.test_nodeless_server_connection()
         type = (
             "success"
