@@ -19,19 +19,16 @@ class PaymentProvider(models.Model):
 
     def test_nodeless_server_connection(self):
         try:
-            _logger.info(f"Called Nodeless test_nodeless_server_connection.")
             server_url = self.crypto_server_url + "/api/v1/status"
             headers = {"Authorization": "Bearer %s" % (self.crypto_api_key), "Content-Type": "application/json",
                        "Accept": "application/json"}
             response = requests.request(method="GET", url=server_url, headers=headers)
-            #_logger.info(f"Response of Nodeless test_nodeless_server_connection.{response}{response.json()}")
             is_success = True if response.status_code == 200 else False
             return is_success
         except Exception as e:
             raise UserError(_("Test Connection Error: %s", e.args))
 
-    def nodeless_action_test_connection(self):
-        _logger.info(f"Called Nodeless nodeless_action_test_connection.")
+    def action_test_connection(self):
         is_success = self.test_nodeless_server_connection()
         type = (
             "success"

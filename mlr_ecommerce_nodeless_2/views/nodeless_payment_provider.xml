@@ -11,7 +11,7 @@
                             <field name="nodeless_store_id"/>
                             <button string="Connect nodeless server"
                                 type="object"
-                                name="nodeless_action_test_connection"
+                                name="action_test_connection"
                                 class="btn-primary"
                                 colspan="4"
                                 icon="fa-television"/>
