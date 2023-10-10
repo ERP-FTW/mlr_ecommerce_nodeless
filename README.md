@@ -1,5 +1,5 @@
 # mlr_ecommerce_nodeless_2
-Lightning Rod Ecommcerce BTCpay Readme
+Lightning Rod Ecommerce Nodeless Readme
 
 Overview
 This custom module for Odoo 16+ adds Nodeless.io as a payment provider to the Ecommerce application. Nodeless.io is a Bitcoin payment gateway/provider which is queried by API calls from Odoo. Nodeless.io account access by API is provided to Odoo and a Bitcoin onchain/lightning option is added to the customer by checkout portal link. If the Bitcoin payment option is selected by a customer, they are forwarded to a BTCpay site with a created invoice and QR code for payment. After the payment is confirmed the customer can be redirected back to the Odoo online store receipt page and the order is registered and queued.
