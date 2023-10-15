@@ -17,7 +17,7 @@ class CustomController(Controller):
     _return_url = '/payment/nodeless/return'
     _create_invoice = '/payment/nodeless/createInvoice'
 
-    def nodelessApiCall(self, payload, api, method):
+    def nodelessApiCall(self, payload, api, call_method):
         try:
             _logger.info(f"Called Nodeless nodelessApiCall. Passed args are {payload}")
             crypto_details = request.env['payment.provider'].sudo().search([('code', '=', 'nodeless')])
@@ -26,7 +26,7 @@ class CustomController(Controller):
             store_id = crypto_details.mapped('nodeless_store_id')[0]
             server_url = f"{base_url}{api.format(store_id=store_id)}"
             headers = {"Authorization": "Bearer %s" % (api_key), "Content-Type": "application/json", "Accept": "application/json"}
-            _logger.info(f"value of server_url is {server_url}, method is {method}, and payload is {payload}")
+            _logger.info(f"value of server_url is {server_url}, method is {call_method}, and payload is {payload}")
             if method == "GET":
                 apiRes = requests.request(server_url, headers=headers, method="GET")
             elif method == "POST":
