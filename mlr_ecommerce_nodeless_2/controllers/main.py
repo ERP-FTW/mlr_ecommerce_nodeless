@@ -27,9 +27,9 @@ class CustomController(Controller):
             server_url = f"{base_url}{api.format(store_id=store_id)}"
             headers = {"Authorization": "Bearer %s" % (api_key), "Content-Type": "application/json", "Accept": "application/json"}
             _logger.info(f"value of server_url is {server_url}, method is {call_method}, and payload is {payload}")
-            if method == "GET":
+            if call_method == "GET":
                 apiRes = requests.request("GET", server_url, headers=headers)
-            elif method == "POST":
+            elif call_method == "POST":
                 apiRes = requests.request("POST", server_url, data=json.dumps(payload), headers=headers)
             _logger.info(f"Completed Nodeless nodelessApiCall. Passing back {apiRes.json()}")
             return apiRes
