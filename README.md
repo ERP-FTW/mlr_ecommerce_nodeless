@@ -50,17 +50,20 @@ Online Shop
 
 Invoicing
 1. Create a quote from Sales -> Orders -> Quotes -> New. Enter the customer, timeframe, and product information. Create the quote and send to a customer.
-  
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/8532224e-5803-44d3-aad8-a5d893dad793)
 2. Confirm the quote once accepted to change status to a Sales Order.
-  
-3. Click Create Invoice to make the invoice for Billing. Select your preferred options.
-
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/41604fbd-fe42-4bb4-b788-660fc864f93b)
+3. Click Create Invoice to make the invoice for Billing. Select your preferred options. Confirm the Draft Invoice to finalize it.
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/f4c92e96-4ce8-42fa-ad65-6121f783c052)
 4. Create the payment link to send to the customer for online payment with Action > Generate a Payment Link.
-   
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/dcb4a615-a6ac-42b8-9c13-981d70b424dd)
 5. Copy the payment link and use the Send & Print button to convey to the customer.
-
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/779fe05e-cbc3-4c85-87a6-6f9f6efc0d4f)
 6. Visiting the payment link will show the enabled online payment providers.
-
-7. The customer will be taken to the third-party site and returned upon payment. The customer will be taken to a payment confirmation page and have access to a customer account history portal if they have an account.
-   
-8. Viewing the invoice will show that it is paid.
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/6894bbb8-dea7-42b7-8809-67649c351d11)
+7. The customer will be taken to the third-party site and returned upon payment.
+   ![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/4e050325-1be2-477b-b58e-f331022d7327)
+8.The customer will be taken to a payment confirmation page and have access to a customer account history portal if they have an account.
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/4b266382-cfdc-483d-9ccf-1909a9ac62c9)
+9. Viewing the invoice will show that it is paid.
+![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless/assets/124227412/c0ff4dba-12d3-429e-a7f4-3ce295eebc76)
