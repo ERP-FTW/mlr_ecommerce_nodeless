@@ -33,8 +33,8 @@ class CustomController(Controller):
                 apiRes = requests.post(server_url, data=json.dumps(payload), headers=headers)
             _logger.info(f"Completed Nodeless nodelessApiCall. Passing back {apiRes.json()}")
             return apiRes
-        except:
-            _logger.info(f"An exception occurred with Nodeless nodelessApiCall.")
+        except Exception as e:
+            _logger.info(f"An exception occurred with Nodeless nodelessApiCall: {e}")
             return
 
     @route(_return_url, type='http', auth='public', methods=['GET', 'POST'], csrf=False)
