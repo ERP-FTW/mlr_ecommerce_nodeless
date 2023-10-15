@@ -28,9 +28,9 @@ class CustomController(Controller):
             headers = {"Authorization": "Bearer %s" % (api_key), "Content-Type": "application/json", "Accept": "application/json"}
             _logger.info(f"value of server_url is {server_url}, method is {method}, and payload is {payload}")
             if method == "GET":
-                apiRes = requests.get(server_url, headers=headers)
+                apiRes = requests.request(server_url, headers=headers, method=method)
             elif method == "POST":
-                apiRes = requests.post(server_url, data=json.dumps(payload), headers=headers)
+                apiRes = requests.request(server_url, data=json.dumps(payload), headers=headers, method=method)
             _logger.info(f"Completed Nodeless nodelessApiCall. Passing back {apiRes.json()}")
             return apiRes
         except Exception as e:
