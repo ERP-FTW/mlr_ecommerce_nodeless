@@ -32,6 +32,7 @@ Setup
    
 
 Operation
+Online Shop
 1. A customer will navigate to the Shop section of the website and add items to the cart. After initiating the checkout and filling in customer information the available payment methods will be displayed.
 ![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless_2/assets/124227412/cb6a9f7b-85d8-4e37-b522-53015a4d0328)
 3. The customer can select the Bitcoin Lightning option and directions will appear below.
@@ -43,3 +44,25 @@ Operation
 8. Odoo will process the order and create a sales order for fulfillment.
 ![image](https://github.com/ERP-FTW/mlr_ecommerce_nodeless_2/assets/124227412/ea135de5-f370-4b6f-8aca-8193588e80b1)
 
+9. To have an invoice automatically created which will show the payment was post go to Website -> Configuration -> Settings -> Invoicing -> Automatic Invoicing.
+10. Activate the Sales application if wishing to use online payment links for Invoices. Enable Sales -> Configuration -> Settings -> Quotations & Orders -> Online Payment.
+
+
+
+
+Invoicing
+1. Create a quote from Sales -> Orders -> Quotes -> New. Enter the customer, timeframe, and product information. Create the quote and send to a customer.
+  
+2. Confirm the quote once accepted to change status to a Sales Order.
+  
+3. Click Create Invoice to make the invoice for Billing. Select your preferred options.
+
+4. Create the payment link to send to the customer for online payment with Action > Generate a Payment Link.
+   
+5. Copy the payment link and use the Send & Print button to convey to the customer.
+
+6. Visiting the payment link will show the enabled online payment providers.
+
+7. The customer will be taken to the third-party site and returned upon payment. The customer will be taken to a payment confirmation page and have access to a customer account history portal if they have an account.
+   
+8. Viewing the invoice will show that it is paid.
