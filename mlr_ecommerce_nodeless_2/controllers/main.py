@@ -58,7 +58,7 @@ class CustomController(Controller):
                         'crypto_conversion_rate': conversion_rate,
                         'crypto_payment_link': resJson.get('checkoutLink'),
                         'crypto_invoiced_crypto_amount': btc,
-                        'nodeless_invoiced_sat_amount': sats,})
+                        'nodeless_invoiced_sat_amount': sats})
                     trn._set_done()
                 else:
                     _logger.info(f"Issue Nodeless custom_process_transaction, status is  Passing back {resJson['status']}")
@@ -85,7 +85,10 @@ class CustomController(Controller):
                 #return {"type": "ir.actions.client","tag": "display_notification","params": {"title": "below min","message": "below amount","sticky": False,"type": "danger"}
                 return request.redirect('/shop/payment')
             web_base_url = request.env['ir.config_parameter'].sudo().get_param('web.base.url')
-            checkout = f"{web_base_url}/payment/nodeless/return?ref={post['ref']}"
+            reference = post['ref']
+            if reference.startswith('Self-Order'):
+                reference = reference.split(' ')[1]
+            checkout = f"{web_base_url}/payment/nodeless/return?ref={reference}"
             payload = {
                 "amount": post['amount'],
                 "redirectUrl": checkout,

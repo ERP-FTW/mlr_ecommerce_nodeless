@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="payment_icon_btc" model="payment.icon">
+    <record id="payment_icon_btc" model="payment.method">
         <field name="sequence">300</field>
         <field name="name">btc</field>
         <field name="image" type="base64" file="mlr_ecommerce_nodeless_2/static/img/btc.png"/>
     </record>
-    <record id="payment_icon_lightning" model="payment.icon">
+    <record id="payment_icon_lightning" model="payment.method">
         <field name="sequence">310</field>
         <field name="name">lightning</field>
         <field name="image" type="base64" file="mlr_ecommerce_nodeless_2/static/img/lightning.png"/>

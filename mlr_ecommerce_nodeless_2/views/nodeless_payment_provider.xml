@@ -6,7 +6,6 @@
             <field name="inherit_id" ref="payment.payment_provider_form"/>
              <field name="arch" type="xml">
                 <group name="provider_credentials" position="after">
-                    <group attrs="{'invisible': [('code', '!=', 'nodeless')]}">
                         <group>
                             <field name="nodeless_store_id"/>
                             <button string="Connect nodeless server"
@@ -16,7 +15,6 @@
                                 colspan="4"
                                 icon="fa-television"/>
                         </group>
-                    </group>
                 </group>
              </field>
         </record>
